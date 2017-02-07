@@ -1,0 +1,79 @@
+<!--<table class="ui inverted table">
+    <thead>
+        <tr>
+            <th>UserId</th>
+            <th>Title</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of allpost">
+            <td>
+                <div class="ui ribbon label">{{item.id}}</div>
+            </td>
+            <td data-tooltip="item.title" data-variation="very wide">{{item.title | textslice}}</td>
+            <td data-content="item.body" data-variation="very wide">{{item.body | textslice}}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="3">
+                <div class="ui right floated pagination menu">
+                    <a class="icon item">
+                        <i class="left chevron icon"></i>
+                    </a>
+                    <a class="item">1</a>
+                    <a class="item">2</a>
+                    <a class="item">3</a>
+                    <a class="item">4</a>
+                    <a class="icon item">
+                        <i class="right chevron icon"></i>
+                    </a>
+                </div>
+            </th>
+        </tr>
+    </tfoot>
+</table>-->
+
+<!--<div class="ui cards">
+    <div class="ui card three column" *ngFor="let item of allpost">
+        <div class="content">
+            <div class="header">{{item?.title | textslice}}</div>
+            <div class="meta">2 days ago</div>
+            <div class="description">
+                <p>{{item?.body}}</p>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<div class="ui four column doubling grid container cards">
+    <div class="column" *ngFor="let item of allpost">
+        <!--<div class="ui centered card">
+            <div class="content">
+                <div class="header">{{item?.title | textslice}}</div>
+                <div class="meta">2 days ago</div>
+                <div class="description">
+                    <p>{{item?.body}}</p>
+                </div>
+            </div>
+        </div>-->
+        <div class="ui card">
+            <div class="content">
+                <div class="header">{{item?.title | textslice}}</div>
+                <div class="meta">
+                    <span class="right floated time">2 days ago</span>
+                    <span class="category">Random</span>
+                </div>
+                <div class="description">
+                    <p>{{item?.body}}</p>
+                </div>
+            </div>
+            <div class="extra content">
+                <div class="right floated author">
+                    <img class="ui avatar image" src="http://semantic-ui.com/images/avatar/small/stevie.jpg"> Teja
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

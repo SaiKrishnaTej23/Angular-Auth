@@ -1,0 +1,49 @@
+<div class="ui container">
+    <h2 class="ui middle aligned">Contact US</h2>
+    <!--
+    <form (ngSubmit)="submitForm()" [formGroup]="contactForm" novalidate>
+        <div class="form-content">
+            <label class="row">
+      Name: 
+      <div class="ui input">
+      <input type="text" formControlName="name" class="sd-form-control" placeholder="Enter your name.">
+      </div>
+    </label>
+            <label class="row">
+      Email:
+      <div class="ui input">
+      <input type="email" formControlName="email" class="sd-form-control" placeholder="Enter your email.">
+      </div>
+    </label>
+            <label class="row">
+      Content:
+      <div class="ui textarea">
+      <textarea formControlName="content" class="sd-form-control" placeholder="Content here."></textarea>
+      </div>
+    </label>
+            <div class="form-submit">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>-->
+
+
+    <div class="ui large form">
+        <form (ngSubmit)="submitForm()" [formGroup]="contactForm" novalidate>
+            <div class="field">
+                <label>Name</label>
+                <input placeholder="Name" type="text" formControlName="name">
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <input placeholder="Email" type="text" formControlName="email">
+            </div>
+            <div class="field">
+                <label>Content</label>
+                <textarea placeholder="Content here!" formControlName="content"></textarea>
+            </div>
+            <div class="ui submit button">Submit</div>
+
+        </form>
+    </div>
+</div>

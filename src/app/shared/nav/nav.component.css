@@ -1,0 +1,27 @@
+/*.navbar-brand {
+    min-height: 75px;
+    background-color: #000000;
+}
+
+.navbar {
+    min-height: 75px;
+    border-radius: 0px;
+}
+
+.navbar-right {
+    height: 75px;
+}
+
+.navbar-right>li {
+    height: 75px;
+}*/
+
+@import url('https://fonts.googleapis.com/css?family=Leckerli+One');
+.ui.inverted.menu {
+    background-color: #2c3e50;
+    font-family: 'Leckerli One', cursive;
+}
+
+.card-2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}

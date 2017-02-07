@@ -1,0 +1,47 @@
+<!--<sm-menu class="inverted teal" title="Deloitte University" logo="http://vignette2.wikia.nocookie.net/acnewleaf/images/1/15/Green_star_icon.png/revision/latest?cb=20131011063244">
+
+    <a sm-item [routerLink]="[item.Route]" *ngFor="let item of NavItems" [icon]="item.Icon">{{item?.Name}}</a>
+    <sm-menu class="menu right secondary">
+        <a sm-item *ngIf="IsLoggedIn" href="#/elements/menu" image="http://semantic-ui.com/images/avatar/small/stevie.jpg">{{Name}}</a>
+        <a sm-item *ngIf="IsLoggedIn" (click)="logout()"> Logout </a>
+        <a sm-item *ngIf="!IsLoggedIn" [routerLink]="['/login']"> Login </a>
+    </sm-menu>
+</sm-menu>-->
+
+<div class="ui large top fixed menu inverted transition visible nav-menu" style="display: flex !important;">
+    <div class="ui container">
+        <a class="item nav-tab">
+            <h3><i class="book icon"></i> <b>Avid Reader Zone</b></h3>
+        </a>
+        <a class="item nav-tab" [routerLink]="[item.Route]" [routerLinkActive]="['active']" *ngFor="let item of NavItems">{{item?.Name}}</a>
+
+        <div class="right menu">
+            <!--<div class="item">
+                <sm-dropdown title="Name" class="pointing floating labeled icon button">
+                    <sm-item *ngFor="let item of NavItems">{{item.Name}}</sm-item>
+                </sm-dropdown>
+            </div>-->
+            <div *ngIf="IsLoggedIn" class="item">
+                <img src="http://semantic-ui.com/images/avatar/small/stevie.jpg" />
+                <a [routerLink]="['/profile']" [routerLinkActive]="['active']">{{Name}}</a>
+            </div>
+            <div *ngIf="IsLoggedIn" class="item">
+                <a href="#" (click)="logout()"> Logout </a>
+            </div>
+            <div *ngIf="!IsLoggedIn" class="item">
+                <a class="" [routerLink]="['/login']" [routerLinkActive]="['active']"> Login </a>
+            </div>
+            <div *ngIf="!IsLoggedIn" class="item">
+                <a class="" [routerLink]="['/register']" [routerLinkActive]="['active']"> Register </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--
+<sm-menu title="Avid Reader Zone" class="inverted massive " style="display: flex !important;">
+    <a sm-item href="#/elements/menu" icon="home">Home</a>
+    <sm-dropdown class="pointing link" title="Cities" [options]="{on: 'hover'}">
+        <sm-item *ngFor="let item of NavItems">{{item?.Name}}</sm-item>
+    </sm-dropdown>
+</sm-menu>-->

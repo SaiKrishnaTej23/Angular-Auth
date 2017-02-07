@@ -1,0 +1,27 @@
+<div class="container main-div">
+    <div class="ui one column stackable center aligned page grid">
+        <div class="column six wide">
+            <div class="ui inverted segment">
+                <div class="ui inverted form">
+                    <div class="one field">
+                        <div class="field">
+                            <label>User Name</label>
+                            <input placeholder="UserName" [(ngModel)]="email" type="text">
+                        </div>
+                        <div class="field">
+                            <label>Password</label>
+                            <input placeholder="Password" (keyup.enter)="login()" [(ngModel)]="password" type="password">
+                        </div>
+                    </div>
+                    <div class="inline field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" tabindex="0" class="hidden">
+                            <label>Keep me logged In</label>
+                        </div>
+                    </div>
+                    <div class="ui submit button" (click)="login()">Login</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

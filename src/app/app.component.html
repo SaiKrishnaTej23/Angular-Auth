@@ -1,0 +1,20 @@
+<nav-app (tabChange)="handleTabChange($event)" [NavItems]="AppNavItems">
+
+</nav-app>
+
+
+<div style="margin-top: 55px;">
+</div>
+
+<main style="background-color:whitesmoke;" class="main-div">
+    <sm-loader [complete]="isCompleted" class="main-container" text="What a drag ! its Loading...">
+    </sm-loader>
+
+    <router-outlet></router-outlet>
+</main>
+
+
+<simple-notifications [options]="options"></simple-notifications>
+
+
+<footer-app></footer-app>

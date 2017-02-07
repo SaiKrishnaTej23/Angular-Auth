@@ -1,4 +1,4 @@
-## angular2-seed
+## Angular Authentication implemetation
 
 A simple starter project demonstrating the basic concepts of Angular 2.
 

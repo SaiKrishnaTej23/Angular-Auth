@@ -7,7 +7,7 @@ import { User } from '../entities/users';
 @Injectable()
 export class UserService {
     private loggedIn = false;
-    base_address: string = 'http://10.9.87.222:8080/api';
+    base_address: string = 'http://localhost:8080/api';
     constructor(private http: Http) {
         this.loggedIn = !!localStorage.getItem('auth_token');
     }

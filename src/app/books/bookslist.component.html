@@ -1,0 +1,22 @@
+<div class="ui grid">
+    <div class="eight wide column" *ngFor="let book of books">
+        <div class="book-card-envelope">
+            <div class="book-card">
+                <div class="book-card-content">
+                    <div class="book-image">
+                        <img class="img" [src]="book.PhotoUrl" alt="http://www.walterbrueggemann.com/wp-content/uploads/1971/01/Book-Cover-Unavailable.png" />
+                    </div>
+                    <div class="book-detail">
+                        <h2 class="header"> {{book.Title}} </h2>
+                        <h4> Author </h4>
+                        <p>Description of the book</p>
+                    </div>
+                </div>
+                <div class="book-card-footer">
+                    <p>{{book.AddedOn | textslice}}</p>
+                    <a class="">Request Book </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

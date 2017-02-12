@@ -3,15 +3,18 @@ import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { User } from '../entities/users';
 // import localStorage from 'localStorage';
+import { AppSettings } from '../utility/appsettings';
 
 @Injectable()
 export class UserService {
-    private loggedIn = false;
-    base_address: string = 'http://localhost:8080/api';
-    constructor(private http: Http) {
+ private loggedIn = false;
+
+    constructor(private http: Http, private appsettings:AppSettings) {
         this.loggedIn = !!localStorage.getItem('auth_token');
     }
-
+       
+    base_address: string = this.appsettings.DataApiDomain;
+    
     login(email, password) {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');

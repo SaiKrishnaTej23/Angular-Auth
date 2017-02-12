@@ -1,0 +1,14 @@
+.column {
+    margin: 1em;
+}
+
+.back {
+    /*background: #021529;
+    background: -webkit-linear-gradient(left, #0B386E, #021529);
+    background: -o-linear-gradient(left, #0B386E, #021529);
+
+    background: -moz-linear-gradient(left, #0B386E, #021529);
+    background: linear-gradient(to left, #0B386E, #021529);*/
+    height: 880px;
+    width: 100%;
+}

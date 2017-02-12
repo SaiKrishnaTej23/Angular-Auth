@@ -1,0 +1,12 @@
+    .navs {
+        padding: 25px;
+        border-right: 1px solid rgba(0, 0, 0, .05);
+    }
+    
+    .item {
+        padding: 25px!important;
+    }
+    
+    .item.active {
+        background-color: gainsboro;
+    }

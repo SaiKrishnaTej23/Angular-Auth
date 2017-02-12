@@ -5,6 +5,8 @@ import { ActionService } from './utility/action.service';
 import { UserService } from './utility/user.service';
 import { EventBusService } from './utility/eventbus.service';
 import { NavItem } from './entities/navitem';
+import { Constants } from './utility/constants';
+
 @Component({
   selector: 'app',
   templateUrl: './app.component.html',
@@ -41,7 +43,7 @@ export class AppComponent implements OnInit {
               
               });
 
-              this.eventbus.listen('LoggedIn').subscribe((e)=>{this.setNavBar()})
+              this.eventbus.listen(Constants.LoggedInEvent).subscribe((e)=>{this.setNavBar()})
   }
 
   handleTabChange(value){
@@ -58,11 +60,10 @@ export class AppComponent implements OnInit {
         
         if (this.user.isLoggedIn()) {
             this.AppNavItems.push(new NavItem("", "/home", "Home", ""));
-
             this.AppNavItems.push(new NavItem("", "/about", "About", ""));
-            //this.NavItems.push(new NavItem("","/github","Github",""));
             this.AppNavItems.push(new NavItem("", "/contact", "Contact", ""));
             this.AppNavItems.push(new NavItem("", "/posts", "Posts", ""));
+            this.AppNavItems.push(new NavItem("", "/books", "Books", ""));
         }
     }
 

@@ -1,0 +1,46 @@
+<div class="routerClasss">
+  <h3>Edit Book Here </h3>
+  <a [routerLink]="['../../list']">back to list</a>
+  <hr/>
+  <div class="form-group">
+    <label for="Title">Title</label>
+    <input type="Text" class="form-control" id="Title" aria-describedby="Title" placeholder="Title" [(ngModel)]="book.Title">
+  </div>
+  <div class="form-group">
+    <label for="Description">Description</label>
+    <input type="Text" class="form-control" id="Description" aria-describedby="Description" placeholder="Description" [(ngModel)]="book.Description">
+  </div>
+    <div class="form-group">
+    <label for="Author">Author</label>
+    <input type="Text" class="form-control" id="Author" aria-describedby="Author" placeholder="Author" [(ngModel)]="book.Author">
+  </div>
+  <div class="form-group">
+    <label for="Category">Category</label>
+    <input type="Text" class="form-control" id="Category" aria-describedby="Category" placeholder="Category" [(ngModel)]="book.Category">
+  </div>
+  <div class="form-group">
+    <label for="Tags">Tags</label>
+    <input type="Text" class="form-control" id="Tags" aria-describedby="Tags" placeholder="Tags" [(ngModel)]="book.Tags">
+  </div>
+  <div class="form-group">
+    <label for="PhotoUrl">Photo Url</label>
+    <input type="PhotoUrl" class="form-control" id="PhotoUrl" aria-describedby="PhotoUrl" placeholder="PhotoUrl" [(ngModel)]="book.PhotoUrl">
+  </div>
+  <div class="form-group">
+    <input type="button" class="btn btn-success" value="Edit Your book" (click)="editBook()">
+  </div>
+</div>
+
+<style>
+  .routerClasss {
+    border: 1px solid #D3D3D3;
+    border-radius: 5px;
+    width: 900px;
+    padding: 50px;
+    margin-left: 50px;
+    padding-top: 0px;
+    height: 450px;
+    overflow-y: scroll;
+  }
+
+</style>

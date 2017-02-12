@@ -4,6 +4,7 @@ import { User } from '../../entities/users';
 import { ActionService } from '../../utility/action.service';
 import { NavItem } from '../../entities/navitem';
 import { EventBusService } from '../../utility/eventbus.service';
+import { Constants } from '../../utility/constants';
 
 @Component({
     selector: 'nav-app',
@@ -11,8 +12,11 @@ import { EventBusService } from '../../utility/eventbus.service';
     styleUrls: ['nav.component.css']
 })
 export class NavComponent implements OnInit {
-    constructor(private user: UserService, private action:ActionService, private eventbus:EventBusService) { 
-         this.eventbus.listen('LoggedIn').subscribe((e)=>{this.UserName()})
+    constructor(
+        private user: UserService, 
+    private action:ActionService,
+     private eventbus:EventBusService) { 
+         this.eventbus.listen(Constants.LoggedInEvent).subscribe((e)=>{this.UserName()})
     }
     @Input() NavItems: Array<NavItem>;
     Name: string;

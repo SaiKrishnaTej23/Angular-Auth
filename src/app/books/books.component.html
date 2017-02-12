@@ -1,0 +1,26 @@
+<div class="ui grid">
+    <div class="three wide column navs">
+        <div class="ui  relaxed divided list">
+            <div class="item">
+                <div class="content">
+                    <h1><b>Menu</b></h1>
+                </div>
+            </div>
+            <a [routerLink]="['list']" [routerLinkActive]="['active']" class="item">
+                <div class="content">
+                    <div class="header"><a> Books</a></div>
+                    check out the new books
+                </div>
+            </a>
+            <a [routerLink]="['add']" [routerLinkActive]="['active']" class="item">
+                <div class="content">
+                    <div class="header"> <a>Add Book</a></div>
+                    Add your books here
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="twelve wide column">
+        <router-outlet></router-outlet>
+    </div>
+</div>

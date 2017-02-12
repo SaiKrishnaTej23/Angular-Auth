@@ -3,4 +3,6 @@ export class Post{
     id:number;
     title:string;
     body:string;
+    postedOn:string;
+    lastupdatedOn:string;
 }

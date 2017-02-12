@@ -1,0 +1,40 @@
+<div class="ui grid">
+    <!--<div class="three wide column margin-custom">
+        <sm-menu title="Articles" class="vertical">
+            <a sm-item icon="home" [routerLink]="['./']">Home</a>
+            <sm-dropdown class="left pointing link" title="Actions">
+                <sm-item>Items</sm-item>
+            </sm-dropdown>
+            <a sm-item [routerLink]="['./add']">Add New Post</a>
+        </sm-menu>
+
+    </div>-->
+    <div class="sixteen wide column  margin-custom">
+
+        <!--<sm-button class="negative home icon" (click)="bottomSidebar.show({transition: 'scale down'})"></sm-button>-->
+        <button class="huge ui circular facebook icon button menuss" (click)="bottomSidebar.show({transition: 'scale down'})">
+  <i class="grid layout icon"></i>
+</button>
+        <sm-sidebar class="bottom inverted nine item labeled icon wide sidebar menu" #bottomSidebar>
+            <a class="item" [routerLink]="['./']">
+                <i class="home icon"></i> Home
+            </a>
+            <a class="item" [routerLink]="['./add']">
+                <i class="block layout icon"></i> Add Post
+            </a>
+        </sm-sidebar>
+        <router-outlet></router-outlet>
+    </div>
+
+
+    <style>
+        .margin-custom {
+            /*margin: 1em;*/
+        }
+        
+        .menuss {
+            position: fixed;
+            bottom: 10%;
+            right: 10%;
+        }
+    </style>

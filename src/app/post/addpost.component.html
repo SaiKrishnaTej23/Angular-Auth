@@ -1,0 +1,32 @@
+<div class="back">
+    <div class="ui container">
+        <div class="ui page grid">
+            <div class="twelve column">
+                <div class="column">
+                    <header class="ui header aligned huge">
+                        <label>   Add new Post </label>
+                    </header>
+                </div>
+                <div class="column">
+                    <div class="ui form">
+
+                        <div class="field">
+                            <label>Title</label>
+                            <textarea rows="2" [(ngModel)]="body.title"></textarea>
+                        </div>
+                        <div class="field">
+                            <label>Body</label>
+                            <textarea [(ngModel)]="body.body"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <button class="ui floated left button" aria-label="label" (click)="addPost()">
+                
+      Add
+    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

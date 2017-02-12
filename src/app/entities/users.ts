@@ -1,3 +1,4 @@
+import { Post } from './post';
 export class User {
     Id: number;
     Name: string;
@@ -5,4 +6,6 @@ export class User {
     Password: string;
     HasAccess: boolean;
     Permissions: string[];
-} 
+    PhotoUrl : string;
+    Posts : Post [];
+}  
